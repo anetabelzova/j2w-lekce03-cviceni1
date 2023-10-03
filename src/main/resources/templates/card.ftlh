@@ -1,3 +1,5 @@
+
+[#ftlh]
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -13,10 +15,10 @@
 <div class="container">
     <div class="person-info">
         <div class="photo-border"></div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Jan_Palach_foto_z_pr%C5%AFkazu.JPG" class="photo" alt="profilové foto"/>
+        <img src="${person.photoURL}" class="photo" alt="profilové foto"/>
         <div class="row">
             <span class="label">Jméno</span>
-            <span class="value">Jan</span>
+            <span class="value">${person.givenName}</span>
         </div>
         <div class="row">
             <span class="label">Příjmení</span>
@@ -24,11 +26,11 @@
         </div>
         <div class="row">
             <span class="label">Datum narození</span>
-            <span class="value">11. srpna 1948</span>
+            <span class="value">${person.birthDate.format('LONG_DATE')}</span>
         </div>
         <div class="row">
             <span class="label">Věk</span>
-            <span class="value">20</span>
+            <span class="value">${person.age}</span>
         </div>
     </div>
     <div class="address">
