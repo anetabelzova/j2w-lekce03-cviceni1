@@ -33,8 +33,8 @@ public class Person {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = String.valueOf(birthDate);
     }
 
     public String getPhotoURL() {

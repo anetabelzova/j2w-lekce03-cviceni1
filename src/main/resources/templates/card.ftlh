@@ -1,5 +1,5 @@
 
-[#ftlh]
+[#ftl]
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -34,8 +34,8 @@
         </div>
     </div>
     <div class="address">
-        <div class="address-line">Smetanova 337</div>
-        <div class="address-line">27716 Všetaty</div>
+        <div class="address-line">"${person.address.street}</div>
+        <div class="address-line">${person.address.zipCode} ${person.address.city}</div>
     </div>
 </div>
 </body>

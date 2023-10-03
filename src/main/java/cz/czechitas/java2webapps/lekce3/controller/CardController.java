@@ -1,5 +1,6 @@
 package cz.czechitas.java2webapps.lekce3.controller;
 
+import cz.czechitas.java2webapps.lekce3.entity.Address;
 import cz.czechitas.java2webapps.lekce3.entity.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @Controller
 public class CardController {
     @GetMapping("/")
+
     public ModelAndView index(){
         ModelAndView result = new ModelAndView("card");
 
@@ -21,6 +23,10 @@ public class CardController {
 
         result.addObject("person", person);
 
+        Address address = new Address();
+        address.setCity("Praha");
+        address.setStreet("Nová 5");
+        address.setZipCode("45211");
 
         return result;
     }
